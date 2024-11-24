@@ -1,17 +1,11 @@
-<app-header></app-header>
 <div class="auth-component">
+  <app-header></app-header>
   <div class="auth-form">
     <h2>{{ title }}</h2>
     <form (ngSubmit)="onSubmit()">
       <div *ngFor="let field of fields" class="input-container">
-        <input
-          [type]="field.type"
-          [name]="field.name"
-          placeholder=" "
-          title="{{ field.placeholder }}"
-          [(ngModel)]="formData[field.name]"
-          required
-        />
+        <input [type]="field.type" [name]="field.name" placeholder=" " title="{{ field.placeholder }}"
+          [(ngModel)]="formData[field.name]" required />
         <label [for]="field.name">{{ field.label }}</label>
       </div>
       <button type="submit">{{ buttonText }}</button>
@@ -25,6 +19,6 @@
     <p *ngIf="mode === 'register'">
       Já tem uma conta? <a (click)="changeMode('login')">Fazer login</a>
     </p>
-  </div>  
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

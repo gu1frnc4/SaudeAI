@@ -108,6 +108,9 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   color: var(--main-color);
+}
+
+header a {
+  text-decoration: none;
 }

@@ -5,9 +5,15 @@
 .auth-component {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    width: 100%;
+}
+
+.auth-component app-header,
+.auth-component app-footer {
+    width: 100%;
 }
 
 .auth-form {
@@ -17,8 +23,8 @@
     flex-direction: column;
     padding: 1em 1em;
     border-radius: 1em;
-    height: 85%;
-    min-width: 20em;
+    height: 100vh;
+    width: 100%;
 }
 
 .auth-form h2 {
