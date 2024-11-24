@@ -9,7 +9,10 @@ O SaúdeAI é uma plataforma robusta e informativa voltada para promover transpa
 3. [Estrutura do Projeto](#estrutura-do-projeto)
 4. [Pré-requisitos](#pré-requisitos)
 5. [Instalação](#instalacao)
-6. [Contribuição](#contribuicao)
+
+## Hospedagem
+
+A plataforma SaúdeAI está hospedada no seguinte link: [https://saude-ai.vercel.app/](https://saude-ai.vercel.app/)
 
 ## Funcionalidades
 
