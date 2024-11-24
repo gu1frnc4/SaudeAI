@@ -1,8 +1,10 @@
-<div class="auth-container">
+<app-header></app-header>
+<div class="auth-component">
+  <div class="auth-form">
     <h2>{{ title }}</h2>
     <form (ngSubmit)="onSubmit()">
       <div *ngFor="let field of fields">
-        <label [for]="field.name">{{ field.label }}</label>
+        <!-- <label [for]="field.name">{{ field.label }}</label> -->
         <input
           [type]="field.type"
           [name]="field.name"
@@ -17,9 +19,11 @@
       Não tem uma conta? <a (click)="changeMode('register')">Criar conta</a>
     </p>
     <p *ngIf="mode === 'login'">
-      Esqueceu a senha? <a (click)="changeMode('forgot')">Recuperar senha</a>
+      Esqueceu a senha? <a (click)="changeMode('forgot-password')">Recuperar senha</a>
     </p>
     <p *ngIf="mode === 'register'">
       Já tem uma conta? <a (click)="changeMode('login')">Fazer login</a>
     </p>
-</div>  
+  </div>  
+</div>
+<app-footer></app-footer>
