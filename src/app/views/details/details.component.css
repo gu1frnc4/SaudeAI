@@ -1,9 +1,15 @@
 .container-details {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    padding: 1rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container-details app-header,
+.container-details app-footer {
+    width: 100%;
 }
 
 .city-details {
@@ -17,6 +23,7 @@
     font-family: var(--Anton-font);
     color: var(--main-color);
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .city-details p {
@@ -32,6 +39,7 @@
     .city-details {
         padding: 10px;
     }
+
     .city-details h2 {
         font-size: 1.5rem;
     }

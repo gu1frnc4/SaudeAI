@@ -1,5 +1,5 @@
-<app-header></app-header>
 <div class="container-details">
+  <app-header></app-header>
   <div *ngIf="cityDetails" class="city-details">
     <h2>{{ cityDetails.nome }}</h2>
     <p><span class="label">Estado:</span> {{ cityDetails.estado }}</p>
@@ -12,5 +12,5 @@
     <p>Gastos Públicos: {{ cityDetails.gastos_publicos }}</p>
   </div>
   <p *ngIf="!cityDetails">Detalhes não encontrados.</p>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
