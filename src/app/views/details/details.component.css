@@ -1,0 +1,28 @@
+.container-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.city-details {
+    padding: 20px;
+    border-radius: 8px;
+    font-family: var(--Quicksand-font);
+    color: var(--grey-color);
+}
+
+.city-details h2 {
+    font-family: var(--Anton-font);
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.city-details p {
+    margin: 8px 0;
+}
+
+.city-details .label {
+    font-weight: bold;
+    color: var(--main-color);
+}

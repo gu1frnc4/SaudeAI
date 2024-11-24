@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container-details">
+  <div *ngIf="cityDetails" class="city-details">
+    <h2>{{ cityDetails.nome }}</h2>
+    <p><span class="label">Estado:</span> {{ cityDetails.estado }}</p>
+    <p><span class="label">Região:</span> {{ cityDetails.regiao }}</p>
+    <p><span class="label">População:</span> {{ cityDetails.populacao }}</p>
+    <p><span class="label">IDHM:</span> {{ cityDetails.idhm }}</p>
+    <p>Mortalidade Infantil: {{ cityDetails.mortalidade_infantil }}</p>
+    <p>Número de Estabelecimentos de Saúde: {{ cityDetails.num_estabelecimentos_saude }}</p>
+    <p>Internações por Diarreia: {{ cityDetails.internacoes_diarreia }}</p>
+    <p>Gastos Públicos: {{ cityDetails.gastos_publicos }}</p>
+  </div>
+  <p *ngIf="!cityDetails">Detalhes não encontrados.</p>
+</div>
+<app-footer></app-footer>
