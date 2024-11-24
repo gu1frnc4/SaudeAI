@@ -117,7 +117,12 @@ SaudeAI/
     npm install
     ```
 
-Abra o navegador e navegue para `http://localhost:4200/.` A aplicação será recarregada automaticamente sempre que você modificar qualquer um dos arquivos fonte.
+3. Execute o servidor de desenvolvimento:
+    ```sh
+    ng serve
+    ```
+
+Abra o navegador e navegue para `http://localhost:4200/`. A aplicação será recarregada automaticamente sempre que você modificar qualquer um dos arquivos fonte.
 
 ## Contribuição
 
