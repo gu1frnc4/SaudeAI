@@ -14,4 +14,9 @@ export class HeaderComponent {
   get isHomePage(): boolean {
     return this.router.url === '/';
   }
+
+  //Método para redirecionar à rota desejada
+  navigateTo(route: string) {
+    this.router.navigate([route]);  
+  }
 }

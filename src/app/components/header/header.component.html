@@ -5,7 +5,7 @@
         <ul>
             <li *ngIf="!isHomePage" class="header-links"><a href="/">Início</a></li>
             <li class="header-links"><a href="/noticias">Notícias</a></li>
-            <li class="header-links"><a href="/entrar">Entrar</a></li>
+            <li class="header-links"><a href="/login" (click)="navigateTo('/login')">Entrar</a></li>
         </ul>
     </nav>
 </header>
