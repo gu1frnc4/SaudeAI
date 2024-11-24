@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     height: 100vh;
+    padding: 1rem;
 }
 
 .app-home {
@@ -68,4 +69,16 @@
     font-weight: 600;
     color: var(--dark-grey-color);
     margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-content-home {
+        padding: 1rem;
+    }
+    .title-home {
+        font-size: 1.5rem;
+    }
+    .subtitle-home {
+        font-size: 1rem;
+    }
 }

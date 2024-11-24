@@ -128,3 +128,17 @@
   font-family: var(--Quicksand-font);
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 10px;
+  }
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .result-item button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}

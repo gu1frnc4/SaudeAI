@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 1rem;
 }
 
 .city-details {
@@ -25,4 +26,13 @@
 .city-details .label {
     font-weight: bold;
     color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .city-details {
+        padding: 10px;
+    }
+    .city-details h2 {
+        font-size: 1.5rem;
+    }
 }

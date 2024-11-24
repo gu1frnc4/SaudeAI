@@ -3,10 +3,11 @@
 }
 
 .auth-component {
-    height: 34em;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .auth-form {
@@ -93,4 +94,13 @@
 .auth-form a {
     color: var(--main-color);
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .auth-form {
+        padding: 1em;
+    }
+    .auth-form .input-container {
+        width: 100%;
+    }
 }

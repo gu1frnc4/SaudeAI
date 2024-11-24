@@ -1,22 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  constructor(private router: Router) {}
+export class HeaderComponent implements OnInit {
+  isHomePage: boolean;
+  isMenuOpen: boolean = false;
 
-  get isHomePage(): boolean {
-    return this.router.url === '/';
+  constructor(private readonly router: Router) {
+    this.isHomePage = this.router.url === '/';
   }
 
-  //Método para redirecionar à rota desejada
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isHomePage = this.router.url === '/';
+      }
+    });
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
   navigateTo(route: string) {
-    this.router.navigate([route]);  
+    this.router.navigate([route]);
+    this.closeMenu();
   }
 }
