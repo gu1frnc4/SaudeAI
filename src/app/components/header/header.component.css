@@ -1,0 +1,39 @@
+.container-header {
+  background-color: var(--main-color);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1097px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+}
+
+.app-nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.header-links a {
+  background: none;
+  border: none;
+  font-family: var(--Anton-font);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}

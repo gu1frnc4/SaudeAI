@@ -1,1 +1,12 @@
-<p>header works!</p>
+<div class="container-header">
+<header class="app-header">
+    <img src="/assets/images/logo.svg" alt="Logo" class="header-logo">
+    <nav class="app-nav">
+        <ul>
+            <li *ngIf="!isHomePage" class="header-links"><a href="/">Início</a></li>
+            <li class="header-links"><a href="/noticias">Notícias</a></li>
+            <li class="header-links"><a href="/entrar">Entrar</a></li>
+        </ul>
+    </nav>
+</header>
+</div>
