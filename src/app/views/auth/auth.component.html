@@ -3,15 +3,16 @@
   <div class="auth-form">
     <h2>{{ title }}</h2>
     <form (ngSubmit)="onSubmit()">
-      <div *ngFor="let field of fields">
-        <!-- <label [for]="field.name">{{ field.label }}</label> -->
+      <div *ngFor="let field of fields" class="input-container">
         <input
           [type]="field.type"
           [name]="field.name"
-          [placeholder]="field.placeholder"
+          placeholder=" "
+          title="{{ field.placeholder }}"
           [(ngModel)]="formData[field.name]"
           required
         />
+        <label [for]="field.name">{{ field.label }}</label>
       </div>
       <button type="submit">{{ buttonText }}</button>
     </form>

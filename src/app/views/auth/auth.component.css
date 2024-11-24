@@ -1,24 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
     font-family: var(--Quicksand-font);
-    /* border: 1px solid red; */
 }
 
-h2{
+.auth-component {
+    height: 34em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 1em;
+    border-radius: 1em;
+    height: 85%;
+    min-width: 20em;
+}
+
+.auth-form h2 {
     text-transform: uppercase;
     padding-bottom: 0.5em;
 }
 
-input{
+.auth-form .input-container {
+    position: relative;
     margin-bottom: 1em;
-    padding: 0.5em;
-    font-size: 100%;
     width: 15em;
-    height: 3em;
 }
 
-form{
+.auth-form input {
+    padding: 0.5em;
+    font-size: 100%;
+    width: 100%;
+    height: 3em;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 0.5em;
+    outline: none;
+}
+
+.auth-form label {
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translateY(-50%);
+    background-color: var(--white-color);
+    padding: 0 0.2em;
+    transition: 0.3s;
+    color: var(--grey-color);
+    pointer-events: none;
+}
+
+.auth-form input:focus + label,
+.auth-form input:not(:placeholder-shown) + label {
+    top: -0.5em;
+    left: 0.5em;
+    font-size: 0.8em;
+    color: var(--main-color);
+}
+
+.auth-form form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +69,7 @@ form{
     padding-bottom: 1em;
 }
 
-button {
+.auth-form button {
     background-color: var(--main-color);
     color: var(--white-color);
     border: none;
@@ -38,35 +81,16 @@ button {
     padding: 0.3em;
 }
 
-button:hover{
+.auth-form button:hover {
     cursor: pointer;
 }
 
-button:active{
+.auth-form button:active {
     background-color: var(--white-color);
     color: var(--main-color);
 }
 
-a {
+.auth-form a {
     color: var(--main-color);
     font-weight: bold;
-}
-
-.auth-component{
-    height: 34em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.auth-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1em 1em;
-    box-shadow: 0em 0em 1em 0.1em  var(--main-color);
-    border-radius: 1em;
-    height: 85%;
-    min-width: 20em;
 }
