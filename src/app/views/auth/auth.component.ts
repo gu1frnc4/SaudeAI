@@ -20,7 +20,7 @@ export class AuthComponent implements OnInit {
   fields: any[] = [];
   formData: any = {};
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private readonly route: ActivatedRoute) {}
 
   ngOnInit() {
     // Pega o modo da rota
