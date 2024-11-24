@@ -1,1 +1,25 @@
-<p>auth works!</p>
+<div class="auth-container">
+    <h2>{{ title }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div *ngFor="let field of fields">
+        <label [for]="field.name">{{ field.label }}</label>
+        <input
+          [type]="field.type"
+          [name]="field.name"
+          [placeholder]="field.placeholder"
+          [(ngModel)]="formData[field.name]"
+          required
+        />
+      </div>
+      <button type="submit">{{ buttonText }}</button>
+    </form>
+    <p *ngIf="mode === 'login'">
+      Não tem uma conta? <a (click)="changeMode('register')">Criar conta</a>
+    </p>
+    <p *ngIf="mode === 'login'">
+      Esqueceu a senha? <a (click)="changeMode('forgot')">Recuperar senha</a>
+    </p>
+    <p *ngIf="mode === 'register'">
+      Já tem uma conta? <a (click)="changeMode('login')">Fazer login</a>
+    </p>
+</div>  
