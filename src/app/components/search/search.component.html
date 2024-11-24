@@ -1,0 +1,26 @@
+<div class="search-container">
+  <input type="text" placeholder="Região" [(ngModel)]="region">
+  <input type="text" placeholder="Estado" [(ngModel)]="state">
+  <input type="text" placeholder="Cidade" [(ngModel)]="city">
+  <button (click)="onSearch()">Buscar</button>
+  <p *ngIf="showWarning" class="warning-message">Por favor, preencha pelo menos o campo "Cidade".</p>
+</div>
+
+<div class="overlay" *ngIf="showOverlay">
+  <div class="modal">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="search-results" *ngIf="searchResults.length > 0">
+        <div *ngFor="let result of searchResults" class="result-item">
+          <h3>{{ result.nome }}</h3>
+          <p>População: {{ result.populacao }}</p>
+          <p>IDHM: {{ result.idhm }}</p>
+          <p>Mortalidade Infantil: {{ result.mortalidade_infantil }}</p>
+          <p>Estabelecimentos de Saúde: {{ result.num_estabelecimentos_saude }}</p>
+          <p>Internações por Diarreia: {{ result.internacoes_diarreia }}</p>
+          <p>Gastos Públicos: {{ result.gastos_publicos }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

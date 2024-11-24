@@ -19,18 +19,25 @@
 
 .app-nav ul {
   display: flex;
-  gap: 30px;
+  gap: .5rem;
   list-style: none;
 }
 
 .header-links a {
   background: none;
   border: none;
-  font-family: var(--Anton-font);
-  font-weight: 400;
+  font-family: var(--Quicksand-font);
+  font-weight: 700;
   font-size: 1.5rem;
   color: var(--white-color);
   cursor: pointer;
+  padding: .5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.header-links a:hover {
+  background-color: var(--white-color);
+  color: var(--header-link-color);
 }
 
 a {

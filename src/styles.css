@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --main-color: #02A4BE;
-    --white-color: #FFFFFF;
-    --grey-color: #4C4A4A;
+:root {
     --Anton-font: 'Anton SC', sans-serif;
     --Quicksand-font: 'Quicksand', sans-serif;
+    --main-color: #02b1cc;
+    --white-color: #FFFFFF;
+    --grey-color: #4C4A4A;
+    --header-link-color: #028a9e;
+    --light-gray-color: #ccc;
+    --background-color: #f9f9f9;
+    --overlay-color: #00000080;
+    --modal-background-color: #fff;
+    --shadow-color: #0000001a;
+    --warning-color: #ff0000;
 }
