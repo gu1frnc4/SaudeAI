@@ -12,8 +12,10 @@
     <div class="modal-content">
       <div class="search-results" *ngIf="searchResults.length > 0">
         <div class="result-item" *ngFor="let result of searchResults">
-          <h3>{{ result.nome }}</h3>
-          <p>População: {{ result.populacao }}</p>
+          <div class="result-item-text">
+            <h3>{{ result.nome }}</h3>
+            <p>População: {{ result.populacao }}</p>
+          </div>
           <button (click)="viewDetails(result.id)">Ver Detalhes</button>
         </div>
       </div>
